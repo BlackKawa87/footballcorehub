@@ -6,6 +6,7 @@ import DashboardClube from '../pages/DashboardClube.jsx';
 import DashboardEmpresario from '../pages/DashboardEmpresario.jsx';
 import PainelAdmin from '../pages/PainelAdmin.jsx';
 import PaginaCadastro from '../pages/PaginaCadastro.jsx';
+import PaginaCadastroAvancado from '../pages/PaginaCadastroAvancado.jsx';
 import PaginaScout from '../pages/PaginaScout.jsx';
 
 const AppRoutes = () => (
@@ -16,6 +17,7 @@ const AppRoutes = () => (
     <Route path="/dashboard-empresario" element={<DashboardEmpresario />} />
     <Route path="/admin" element={<PainelAdmin />} />
     <Route path="/cadastro" element={<PaginaCadastro />} />
+    <Route path="/cadastroavancado" element={<PaginaCadastroAvancado />} />
     <Route path="/scout" element={<PaginaScout />} />
   </Routes>
 );
