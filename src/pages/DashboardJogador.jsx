@@ -1,23 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const DashboardJogador = () => {
-  const [matches, setMatches] = useState([]);
-
-  useEffect(() => {
-    fetch('/api/matches')
-      .then((res) => res.json())
-      .then((data) => setMatches(data.matches || []))
-      .catch(() => setMatches([]));
-  }, []);
+  const navigate = useNavigate();
 
   return (
-    <div className="p-4 text-center">
-      <h2 className="text-xl mb-4">Próximos Jogos</h2>
-      <ul className="space-y-1">
-        {matches.map((m, idx) => (
-          <li key={idx}>{m.team1} x {m.team2} ({m.date})</li>
-        ))}
-      </ul>
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
+      <h1 className="text-3xl font-bold text-gray-800 mb-2 text-center">
+        Painel do Jogador
+      </h1>
+      <p className="text-lg text-gray-600 mb-8 text-center">
+        Escolha o que deseja fazer:
+      </p>
+
+      <div className="grid gap-4 w-full max-w-md">
+        <button
+          onClick={() => navigate('/perfilinteligente')}
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl"
+        >
+          Gerar Perfil Completo com IA
+        </button>
+
+        <button
+          onClick={() => navigate('/analise-pre-jogo')}
+          className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl"
+        >
+          Gerar Análise Pré-Jogo
+        </button>
+
+        <button
+          onClick={() => navigate('/analise-pos-jogo')}
+          className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl"
+        >
+          Gerar Análise Pós-Jogo
+        </button>
+      </div>
     </div>
   );
 };
