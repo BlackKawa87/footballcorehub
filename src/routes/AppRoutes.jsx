@@ -1,29 +1,25 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home.jsx'; // <- ESTE é o novo componente de landing page!
-import DashboardJogador from '../pages/DashboardJogador.jsx';
-import DashboardClube from '../pages/DashboardClube.jsx';
-import DashboardEmpresario from '../pages/DashboardEmpresario.jsx';
-import PainelAdmin from '../pages/PainelAdmin.jsx';
-import PaginaCadastro from '../pages/PaginaCadastro.jsx';
-import PaginaCadastroAvancado from '../pages/PaginaCadastroAvancado.jsx';
-import ScoutPage from '../pages/ScoutPage.jsx';
-import TransferLab from '../components/TransferLab.jsx';
-import PlayerStatistics from '../pages/PlayerStatistics.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const AppRoutes = () => (
-  <Routes>
-    <Route path="/" element={<Home />} /> {/* Home correta */}
-    <Route path="/dashboard-jogador" element={<DashboardJogador />} />
-    <Route path="/dashboard-clube" element={<DashboardClube />} />
-    <Route path="/dashboard-empresario" element={<DashboardEmpresario />} />
-    <Route path="/admin" element={<PainelAdmin />} />
-    <Route path="/cadastro" element={<PaginaCadastro />} />
-    <Route path="/cadastroavancado" element={<PaginaCadastroAvancado />} />
-    <Route path="/scout" element={<ScoutPage />} />
-    <Route path="/player-stats" element={<PlayerStatistics />} />
-    <Route path="/transferlab" element={<TransferLab />} />
-  </Routes>
-);
+import Home from '../pages/Home';
+// Aqui você pode importar as outras páginas conforme forem sendo criadas
+// import JogadorDashboard from '../pages/JogadorDashboard';
+// import ScoutDashboard from '../pages/ScoutDashboard';
+// import EmpresarioDashboard from '../pages/EmpresarioDashboard';
+// import ClubesDashboard from '../pages/ClubesDashboard';
+
+const AppRoutes = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/jogador" element={<JogadorDashboard />} />
+        <Route path="/scout" element={<ScoutDashboard />} />
+        <Route path="/empresario" element={<EmpresarioDashboard />} />
+        <Route path="/clubes" element={<ClubesDashboard />} /> */}
+      </Routes>
+    </Router>
+  );
+};
 
 export default AppRoutes;
