@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import HomePage from '../pages/HomePage.jsx';
+import Home from '../pages/Home.jsx'; // Corrigido aqui
 import DashboardJogador from '../pages/DashboardJogador.jsx';
 import DashboardClube from '../pages/DashboardClube.jsx';
 import DashboardEmpresario from '../pages/DashboardEmpresario.jsx';
@@ -13,7 +13,7 @@ import PlayerStatistics from '../pages/PlayerStatistics.jsx';
 
 const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<HomePage />} />
+    <Route path="/" element={<Home />} /> {/* Corrigido aqui */}
     <Route path="/dashboard-jogador" element={<DashboardJogador />} />
     <Route path="/dashboard-clube" element={<DashboardClube />} />
     <Route path="/dashboard-empresario" element={<DashboardEmpresario />} />
