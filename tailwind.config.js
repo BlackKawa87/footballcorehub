@@ -1,6 +1,14 @@
 module.exports = {
   content: [
     './index.html',
+ codex/create-analiseposjogo-component
+    './src/**/*.{js,jsx,ts,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+
     './src/**/*.{js,jsx,ts,tsx}'
   ],
   darkMode: 'class',
@@ -12,4 +20,5 @@ module.exports = {
     }
   },
   plugins: []
+ main
 };
