@@ -40,3 +40,6 @@ const BuscaScout = () => {
 };
 
 export default BuscaScout;
+};
+
+export default BuscaScout;
