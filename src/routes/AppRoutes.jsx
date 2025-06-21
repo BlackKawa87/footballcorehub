@@ -8,6 +8,7 @@ import PainelAdmin from '../pages/PainelAdmin.jsx';
 import PaginaCadastro from '../pages/PaginaCadastro.jsx';
 import PaginaCadastroAvancado from '../pages/PaginaCadastroAvancado.jsx';
 import ScoutPage from '../pages/ScoutPage.jsx';
+import TransferLab from '../components/TransferLab.jsx';
 
 const AppRoutes = () => (
   <Routes>
@@ -19,6 +20,7 @@ const AppRoutes = () => (
     <Route path="/cadastro" element={<PaginaCadastro />} />
     <Route path="/cadastroavancado" element={<PaginaCadastroAvancado />} />
     <Route path="/scout" element={<ScoutPage />} />
+    <Route path="/transferlab" element={<TransferLab />} />
   </Routes>
 );
 
