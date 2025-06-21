@@ -1,17 +1,12 @@
 # FootballCoreHub
 
-Este projeto é uma aplicação React utilizando Tailwind CSS.
+Aplicativo React com Tailwind CSS.
 
-## Scripts
+## Uso rápido
 
-- `npm run dev` inicia o servidor de desenvolvimento.
-- `npm run build` gera os arquivos de produção.
-- `npm run preview` executa o servidor para visualizar a build.
+1. `npm run dev` inicia o modo de desenvolvimento.
+2. `npm run build` gera a versão de produção.
+3. `npm run preview` visualiza a build.
 
-## Deploy na Vercel
-
-1. Copie o arquivo `.env.example` para `.env` e defina `VITE_API_FOOTBALL_KEY` com sua chave da API.
-2. No painel da Vercel, crie uma variável de ambiente com o mesmo nome para que as funções serverless possam acessá-la de forma segura.
-3. A pasta de saída é `dist` e já está configurada no arquivo `vercel.json`.
-4. Após conectar o repositório, o deploy será realizado automaticamente a cada push.
+Para deploy na Vercel, copie `.env.example` para `.env`, configure `VITE_API_FOOTBALL_KEY` e faça push no repositório.
 
