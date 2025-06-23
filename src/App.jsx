@@ -1,20 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Login from './pages/Login';
-import Cadastro from './pages/Cadastro';
+import Player from './pages/Player';
+import Club from './pages/Club';
+import Agent from './pages/Agent';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-gray-900 text-white font-inter">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/player" element={<Player />} />
+      <Route path="/club" element={<Club />} />
+      <Route path="/agent" element={<Agent />} />
+    </Routes>
   );
 }
 
