@@ -5,6 +5,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center text-white px-4">
       <h1 className="text-4xl font-bold mb-4">FootballCoreHub</h1>
+      <p style={{ color: 'green', fontWeight: 'bold', marginTop: '20px' }}>
+        ✅ Plataforma FootballCoreHub V2 publicada com sucesso!
+      </p>
       <p style={{ color: 'green', fontWeight: 'bold' }}>🧠 Plataforma conectada com sucesso ao GitHub!</p>
       <p className="text-lg mb-8 text-center max-w-xl">
         Bem-vindo à nova era da análise individual de jogadores
