@@ -1,12 +1,23 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home'; // <== Aqui está o novo
+import React from 'react'
+import { useRoutes } from 'react-router-dom'
+import Home from '../pages/Home'
+import PaginaCadastro from '../pages/PaginaCadastro'
+import DashboardJogador from '../pages/DashboardJogador'
+import DashboardClube from '../pages/DashboardClube'
+import DashboardEmpresario from '../pages/DashboardEmpresario'
+import TransferLab from '../pages/TransferLab'
+import ScoutPage from '../pages/ScoutPage'
 
-const AppRoutes = () => (
-  <Routes>
-    <Route path="/" element={<Home />} />
-    {/* outras rotas */}
-  </Routes>
-);
+const routes = [
+  { path: '/', element: <Home /> },
+  { path: '/cadastro', element: <PaginaCadastro /> },
+  { path: '/dashboard-jogador', element: <DashboardJogador /> },
+  { path: '/dashboard-clube', element: <DashboardClube /> },
+  { path: '/dashboard-empresario', element: <DashboardEmpresario /> },
+  { path: '/transferlab', element: <TransferLab /> },
+  { path: '/scout', element: <ScoutPage /> },
+]
 
-export default AppRoutes;
+const AppRoutes = () => useRoutes(routes)
+
+export default AppRoutes
