@@ -1,12 +1,8 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home'; // <== Aqui está o novo
+import { useRoutes } from 'react-router-dom'
+import Home from '../pages/Home'
 
-const AppRoutes = () => (
-  <Routes>
-    <Route path="/" element={<Home />} />
-    {/* outras rotas */}
-  </Routes>
-);
-
-export default AppRoutes;
+export default function AppRoutes() {
+  return useRoutes([
+    { path: '/', element: <Home /> }
+  ])
+}
