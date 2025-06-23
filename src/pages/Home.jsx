@@ -3,45 +3,32 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white font-inter">
-      {/* Header */}
-      <header className="w-full px-6 py-4 border-b border-gray-700 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-white">FootballCoreHub</h1>
+    <div className="min-h-screen flex flex-col bg-gray-900 text-white font-inter">
+      <header className="flex justify-between items-center px-6 py-4 border-b border-gray-800">
+        <h1 className="text-2xl font-bold">FootballCoreHub</h1>
         <nav className="space-x-4">
-          <Link to="/player" className="hover:text-blue-400 transition">Player</Link>
-          <Link to="/club" className="hover:text-blue-400 transition">Club</Link>
-          <Link to="/agent" className="hover:text-blue-400 transition">Agent</Link>
-          <Link to="/stats" className="hover:text-blue-400 transition">Statistics</Link>
+          <Link to="/" className="hover:text-blue-400">Home</Link>
+          <Link to="/login" className="hover:text-blue-400">Login</Link>
+          <Link to="/cadastro" className="hover:text-blue-400">Cadastro</Link>
         </nav>
       </header>
-
-      {/* Hero Section */}
-      <main className="flex flex-col items-center justify-center text-center px-6 py-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">Sua Plataforma de Análise Individual Inteligente</h2>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">
-          Potencialize sua performance com relatórios personalizados, análises táticas por IA e recomendações exclusivas para o seu estilo de jogo.
+      <main className="flex flex-col items-center justify-center flex-1 text-center px-6">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">Explore o Futebol de um Jeito Novo</h2>
+        <p className="text-lg text-gray-300 mb-8 max-w-2xl">
+          Plataforma para análise individual de atletas e networking no futebol.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
-            to="/player"
-            className="px-6 py-3 bg-blue-600 rounded-md hover:bg-blue-700 transition"
-          >
-            Sou Jogador
-          </Link>
-          <Link
-            to="/club"
-            className="px-6 py-3 bg-green-600 rounded-md hover:bg-green-700 transition"
-          >
-            Sou Clube
-          </Link>
-          <Link
-            to="/agent"
-            className="px-6 py-3 bg-yellow-500 rounded-md hover:bg-yellow-600 transition"
-          >
-            Sou Empresário
-          </Link>
-        </div>
+        <Link to="/cadastro" className="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700 transition">
+          Começar Agora
+        </Link>
       </main>
+      <footer className="py-6 border-t border-gray-800 text-center space-y-2">
+        <div className="space-x-4">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">Facebook</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">Twitter</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">Instagram</a>
+        </div>
+        <p className="text-sm text-gray-400">© 2024 FootballCoreHub</p>
+      </footer>
     </div>
   );
 };
